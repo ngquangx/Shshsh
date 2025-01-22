@@ -74,23 +74,11 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/AnDepZaiHub/AnDepZaiH
 	end
 })
 local Button = Section:AddButton({
-	["Title"] = "ANDZ",
+	["Title"] = "Bap Red",
 	["Content"] = "Hỗ trợ máy yếu",
 	["Icon"] = "rbxassetid://16932740082",
 	["Callback"] = function()
 	  loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaCrack/BapRed/main/BapRedHub"))()
-	end
-})
-local Button = Section:AddButton({
-	["Title"] = "Kaitun",
-	["Content"] = "Hỗ trợ máy yếu",
-	["Icon"] = "rbxassetid://16932740082",
-	["Callback"] = function()
-	  getgenv().Team = "Marines" -- Pirates/Marines
-getgenv().Fix_Lag = true -- true/false
-getgenv().Auto_Execute = false -- true/false
-getgenv().Clear_Settings = false -- true/false
-loadstring(game:HttpGet("http://apixerohub.x10.mx/main.lua"))()
 	end
 })
 local Button = Section:AddButton({
