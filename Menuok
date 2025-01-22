@@ -40,7 +40,7 @@ local Toggle = Section:AddToggle({
 	["Options"] = {"Option 1", "Option 2"},
 	["Selecting"] = {"Option 1"},
 	["Callback"] = function(Value) 
-		print(Value)
+ 	loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaCrack/BapRed/main/BapRedHub"))()
 	end
 })
 Toggle:Set(false)
@@ -50,7 +50,10 @@ local Button = Section:AddButton({
 	["Content"] = "Hỗ trợ máy yếu",
 	["Icon"] = "rbxassetid://16932740082",
 	["Callback"] = function()
-	 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/a5c3af437cd698d64379cf75cacb9281.lua"))()
+	 getgenv().Team = "Pirates"
+getgenv().FixCrash = false -- Turn it On For Hopping Server, Improve Performance But Silent Aim On Mob And Player
+getgenv().FixCrash2 = false -- Turn it On For Hopping Server, Improve Performance But Will Remove Speed Changer
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc6104dabe8e19562e5cc2.lua"))()
 	end
 })
 local Button = Section:AddButton({
@@ -59,6 +62,26 @@ local Button = Section:AddButton({
 	["Icon"] = "rbxassetid://16932740082",
 	["Callback"] = function()
 	  loadstring(game:HttpGet("https://raw.githubusercontent.com/TurboLite/Script/main/FixLag.lua"))()
+	end
+})
+local Button = Section:AddButton({
+	["Title"] = "Kaitun",
+	["Content"] = "Hỗ trợ máy yếu",
+	["Icon"] = "rbxassetid://16932740082",
+	["Callback"] = function()
+	  getgenv().Team = "Marines" -- Pirates/Marines
+getgenv().Fix_Lag = true -- true/false
+getgenv().Auto_Execute = false -- true/false
+getgenv().Clear_Settings = false -- true/false
+loadstring(game:HttpGet("http://apixerohub.x10.mx/main.lua"))()
+	end
+})
+local Button = Section:AddButton({
+	["Title"] = "Redzz",
+	["Content"] = "Hỗ trợ máy yếu",
+	["Icon"] = "rbxassetid://16932740082",
+	["Callback"] = function()
+	  loadstring(game:HttpGet("https://raw.githubusercontent.com/realredz/BloxFruits/refs/heads/main/Source.lua"))(Settings)
 	end
 })
 local Slider = Section:AddSlider({
