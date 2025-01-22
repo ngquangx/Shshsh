@@ -40,7 +40,7 @@ local Toggle = Section:AddToggle({
 	["Options"] = {"Option 1", "Option 2"},
 	["Selecting"] = {"Option 1"},
 	["Callback"] = function(Value) 
- 	loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaCrack/BapRed/main/BapRedHub"))()
+ 	        print(Value)
 	end
 })
 Toggle:Set(false)
