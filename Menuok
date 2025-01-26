@@ -1,129 +1,98 @@
-local UiMakeLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Msunehub/Uilm/refs/heads/main/UiMat1.lua"))()
-local Notify = UiMakeLib:MakeNotify({
-	["Title"] = "tên Hub",
-	["Description"] = "Notification",
-	["Color"] = Color3.fromRGB(151, 207, 23),
-	["Content"] = "Welcome to Fluriore UI",
-	["Time"] = 1,
-	["Delay"] = 10
-})
-local Window = UiMakeLib:MakeGui({
-	["NameHub"] = "ModGamer",
-	["Description"] = "Version 1",
-	["Color"] = Color3.fromRGB(151, 207, 23),
-	["Logo Player"] = "https://www.roblox.com/headshot-thumbnail/image?userId="..game:GetService("Players").LocalPlayer.UserId .."&width=420&height=420&format=png",
-	["Name Player"] = tostring(game:GetService("Players").LocalPlayer.Name),
-	["Tab Width"] = 140
-})
-local Tab1 = Window:CreateTab({
-	["Name"] = "Home",
-	["Icon"] = "rbxassetid://7733960981"
-})
-local Tab2 = Window:CreateTab({
-	["Name"] = "Cài đặt",
-	["Icon"] = "rbxassetid://7734053495"
-})
-local Section = Tab1:AddSection("Mở Các Loại Hack")
-local Paragraph = Section:AddParagraph({
-	["Title"] = "Paragraph",
-	["Content"] = "This is a Paragraph"
-})
-Paragraph:Set({
-	["Title"] = "Paragraph",
-	["Content"] = "This is a Paragraph"
-})
-local Toggle = Section:AddToggle({
-	["Title"]= "Toggle",
-	["Content"] = "This is a Toggle",
-	["Default"] = false,
-	["Multi"] = true,
-	["Options"] = {"Option 1", "Option 2"},
-	["Selecting"] = {"Option 1"},
-	["Callback"] = function(Value) 
- 	        print(Value)
-	end
-})
-Toggle:Set(false)
-print(Toggle.Value)
-local Button = Section:AddButton({
-	["Title"] = "W-aruze",
-	["Content"] = "Hỗ trợ máy yếu",
-	["Icon"] = "rbxassetid://16932740082",
-	["Callback"] = function()
-	 getgenv().Team = "Pirates"
-getgenv().FixCrash = false -- Turn it On For Hopping Server, Improve Performance But Silent Aim On Mob And Player
-getgenv().FixCrash2 = false -- Turn it On For Hopping Server, Improve Performance But Will Remove Speed Changer
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc6104dabe8e19562e5cc2.lua"))()
-	end
-})
-local Button = Section:AddButton({
-	["Title"] = "Fix lag",
-	["Content"] = "Hỗ trợ máy yếu",
-	["Icon"] = "rbxassetid://16932740082",
-	["Callback"] = function()
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/daucobonhi/Ui-Redz-V2/refs/heads/main/UiREDzV2.lua")))()
+
+       local Window = MakeWindow({
+         Hub = {
+         Title = "모FG Gamer모",
+         Animation = "Welcome to FG"
+         },
+        Key = {
+        KeySystem = true,
+        Title = "모Key System",
+        Description = "모Nhap key vo day...",
+        KeyLink = "",
+        Keys = {"nguyenquang"},
+        Notifi = {
+        Notifications = true,
+        CorrectKey = "Running the Script...",
+       Incorrectkey = "The key is incorrect",
+       CopyKeyLink = "Copied to Clipboard"
+      }
+    }
+  })
+
+       MinimizeButton({
+       Image = "http://www.roblox.com/asset/?id=128933802535491",
+       Size = {40, 40},
+       Color = Color3.fromRGB(10, 10, 10),
+       Corner = true,
+       Stroke = false,
+       StrokeColor = Color3.fromRGB(255, 0, 0)
+      })
+      
+------ Tab
+     local Tab1o = MakeTab({Name = "모MAIN모"})
+     local Tab2o = MakeTab({Name = "모Fruit & chest모"})
+-------TOGGLE 
+
+     Toggle = AddToggle(Tab1o, {
+      Name = "button",
+      Default = true,
+      Callback = function()
+     end
+    })
+    
+------- BUTTON
+    
+    AddButton(Tab1o, {
+     Name = "FIX LAG",
+    Callback = function()
 	  loadstring(game:HttpGet("https://raw.githubusercontent.com/TurboLite/Script/main/FixLag.lua"))()
-	end
-})
-local Button = Section:AddButton({
-	["Title"] = "ANDZ",
-	["Content"] = "Hỗ trợ máy yếu",
-	["Icon"] = "rbxassetid://16932740082",
-	["Callback"] = function()
+  end
+  })
+     AddButton(Tab1o, {
+     Name = "REDZ",
+    Callback = function()
+	  local Settings = {
+  JoinTeam = "Pirates"; -- Pirates/Marines
+  Translator = true; -- true/false
+}
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/realredz/BloxFruits/refs/heads/main/Source.lua"))(Settings)
+  end
+  })   AddButton(Tab1o, {
+     Name = "W-azure",
+    Callback = function()
+	  getgenv().Team = "Pirates"
+getgenv().FixCrash = false
+getgenv().FixCrash2 = false
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc6104dabe8e19562e5cc2.lua"))()
+  end
+  })   AddButton(Tab1o, {
+     Name = "Volcano",
+    Callback = function()
+	  loadstring(game:HttpGet("https://raw.githubusercontent.com/wpisstestfprg/Volcano/refs/heads/main/VolcanoLocal.lua", true))()
+  end
+  })   AddButton(Tab1o, {
+     Name = "ADZ",
+    Callback = function()
 	  repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
 loadstring(game:HttpGet("https://raw.githubusercontent.com/AnDepZaiHub/AnDepZaiHubBeta/refs/heads/main/AnDepZaiHubNewUpdated.lua"))()
-	end
-})
-local Button = Section:AddButton({
-	["Title"] = "Bap Red",
-	["Content"] = "Hỗ trợ máy yếu",
-	["Icon"] = "rbxassetid://16932740082",
-	["Callback"] = function()
-	  loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaCrack/BapRed/main/BapRedHub"))()
-	end
-})
-local Button = Section:AddButton({
-	["Title"] = "Redzz",
-	["Content"] = "Hỗ trợ máy yếu",
-	["Icon"] = "rbxassetid://16932740082",
-	["Callback"] = function()
-	  loadstring(game:HttpGet("https://raw.githubusercontent.com/realredz/BloxFruits/refs/heads/main/Source.lua"))(Settings)
-	end
-})
-local Slider = Section:AddSlider({
-	["Title"] = "Slider",
-	["Content"] = "This is a Slider",
-	["Min"] = 0,
-	["Max"] = 100,
-	["Increment"] = 1,
-	["Default"] = 30,
-	["Callback"] = function(Value) 
-		print(Value)
-	end
-})
-Slider:Set(30)
-print(Slider.Value)
-local Input = Section:AddInput({
-	["Title"] = "Input",
-	["Content"] = "This is a Input",
-	["Callback"] = function(Value) 
-		print(Value)
-	end
-})
-Input:Set("Input TextBox")
-print(Input.Value)
-local Dropdown = Section:AddDropdown({
-	["Title"] = "Dropdown",
-	["Content"] = "This is a Dropdown",
-	["Multi"] = false,
-	["Options"] = {"Option 1", "Option 2"},
-	["Default"] = {"Option 1"},
-	["Callback"] = function(Value)
-		print(Value)
-	end
-})
-Dropdown:Set({"Option 1"})
-Dropdown:AddOption("Option 3")
-Dropdown:Clear()
-Dropdown:Refresh({"Option 1", "Option 2"}, {"Option 1"})
-print(Dropdown.Value)
-print(Dropdown.Options)
+  end
+  })
+----- Dropdown 
+
+  Dropdown = AddDropdown(Tab1o, {
+     Name = "ko biet",
+     Options = {"Test 1", "Test 2", "Test 3", "Test 4"},
+     Default = "Melee",
+     Callback = function()
+     end
+   })
+
+----- Section 
+   
+   Section = AddSection(Tab1o, {"a"})          
+
+----- Paragraph 
+                    
+   Paragraph = AddParagraph(Farm, {"a", ""})
